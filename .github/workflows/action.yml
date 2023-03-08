@@ -20,7 +20,7 @@ jobs:
             - PARAM2: VALUE2
       - name: Commit files 
         run: |
-          git config --local user.email "test@github.com"
+          git config --local user.email "sporthasan.24798.bilal@gmail.com"
           git config --local user.name "GitHub Action test"
           git add .
           git commit -m "Add changes"
