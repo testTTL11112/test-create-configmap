@@ -18,11 +18,12 @@ jobs:
           params: |
             - PARAM1: VALUE1
             - PARAM2: VALUE2
-          run: |
-            git config --local user.email "test@github.com"
-            git config --local user.name "GitHub Action test"
-            git add .
-            git commit -m "Add changes"
+      - name: Commit files 
+        run: |
+          git config --local user.email "test@github.com"
+          git config --local user.name "GitHub Action test"
+          git add .
+          git commit -m "Add changes"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
