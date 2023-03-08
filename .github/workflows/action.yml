@@ -24,9 +24,5 @@ jobs:
           git config --local user.name "GitHub Action test"
           git add .
           git commit -m "Add changes"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.PAT }}
-          force: true
+          git push https://${{ secrets.PAT }}@github.com/testTTL11112/test-create-configmap.git
 
