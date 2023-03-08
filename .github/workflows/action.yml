@@ -1,0 +1,25 @@
+name: Create a configmap
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  createFile:
+    name: Create A File
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: 1arp/create-a-file-action@0.2
+        with:
+          path: 'k8s'
+          file: 'backend-configmap.yaml'
+          content: |
+            apiVersion: v1
+            kind: ConfigMap
+            metadata:
+              name: backend-config
+            data:
+              PARAM1: VALUE1
+              PARAM2: VALUE2
