@@ -24,5 +24,5 @@ jobs:
           git config --local user.name "GitHub Action test"
           git add .
           git commit -m "Add changes"
-          git push https://${{ secrets.PAT }}@github.com/testTTL11112/test-create-configmap.git
+          git push https://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@github.com/testTTL11112/test-create-configmap.git
 
