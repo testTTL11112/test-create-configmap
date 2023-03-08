@@ -11,15 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: 1arp/create-a-file-action@0.2
+      - uses: HasanBilal133/create-a-k8s-configmap-action@master
         with:
           path: 'k8s'
-          file: 'backend-configmap.yaml'
-          content: |
-            apiVersion: v1
-            kind: ConfigMap
-            metadata:
-              name: backend-config
-            data:
-              PARAM1: VALUE1
-              PARAM2: VALUE2
+          name: 'backend-configmap.yaml'
+          params: |
+              - PARAM1: VALUE1
+              - PARAM2: VALUE2
