@@ -16,5 +16,16 @@ jobs:
           path: 'k8s'
           name: 'backend-configmap.yaml'
           params: |
-              - PARAM1: VALUE1
-              - PARAM2: VALUE2
+            - PARAM1: VALUE1
+            - PARAM2: VALUE2
+          run: |
+            git config --local user.email "test@github.com"
+            git config --local user.name "GitHub Action test"
+            git add .
+            git commit -m "Add changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
+
