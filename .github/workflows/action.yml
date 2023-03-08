@@ -29,5 +29,6 @@ jobs:
         with:
           github_token: ${{ secrets.PAT }}
           branch: master
+          repository: https://github.com/testTTL11112/test-create-configmap.git
           force: true
 
