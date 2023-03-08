@@ -28,7 +28,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.PAT }}
-          branch: master
-          repository: https://github.com/testTTL11112/test-create-configmap.git
           force: true
 
