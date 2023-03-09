@@ -16,8 +16,8 @@ jobs:
           path: 'k8s'
           name: 'backend-configmap.yaml'
           params: |
-            - PARAM1: VALUE1
-            - PARAM2: VALUE2
+            PARAM1: VALUE1
+            PARAM2: VALUE2
       - name: Commit files 
         run: |
           git config --local user.email "126247712+testTTL11112@users.noreply.github.com"
