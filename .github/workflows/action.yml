@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: HasanBilal133/create-a-k8s-configmap-action@master
         with:
-          path: 'k8s'
-          name: 'backend-configmap.yaml'
+          path: 'k8s/backend-configmap.yaml'
+          name: 'backend-configmap'
           params: |
             PARAM1: VALUE1
             PARAM2: VALUE2
