@@ -7,7 +7,7 @@ on:
 
 jobs:
   createFile:
-    name: Create A File
+    name: Create a k8s configmap file
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,12 +18,3 @@ jobs:
           params: |
             PARAM1: VALUE1
             PARAM2: VALUE2
-      - name: Commit files 
-        run: |
-          git config --local user.email "126247712+testTTL11112@users.noreply.github.com"
-          git config --local user.name "GitHub Action test"
-          git add .
-          git commit -m "Add changes"
-          git config --local --unset-all "http.https://github.com/.extraheader"
-          git push https://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@github.com/testTTL11112/test-create-configmap.git
-
